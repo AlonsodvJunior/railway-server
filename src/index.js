@@ -1,14 +1,15 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 
 const app = express();
 
 app.get("/", (req,res) => {
-    res.sendFile("src/index.html");
+res.sendFile(path.join(__dirname, "index.html"));
 })
 
 app.get("/videoxxx", (req, res) => {
-    const videoPath = "src/attach/gostosa-1.mp4";
+    const videoPath = path.join(__dirname, "attach/gostosa-1.mp4");
     const stat = fs.statSync(videoPath);
     const fileSize = stat.size;
     const range = req.headers.range;
