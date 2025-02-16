@@ -1,0 +1,13 @@
+{
+    "name": "mi-proyecto",
+    "version": "1.0.0",
+    "description": "proyecto en railway",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "express": "4.21.2"
+    },
+    "license": "MIT"
+}
